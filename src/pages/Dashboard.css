@@ -1,0 +1,103 @@
+:root {
+  color-scheme: light; /* تم همیشه روشن */
+  --primary: #6a1b9a; /* بنفش اصلی */
+  --primary-light: #8e24aa;
+  --text-dark: #222;
+  --text-light: #fff;
+  --background: #f9f9f9;
+  --card-bg: #fff;
+  --border-color: #ddd;
+}
+
+/* 🔹 ساختار کلی داشبورد */
+.dashboard {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-family: "IRANSans", sans-serif;
+}
+
+/* 🔹 هدر بنفش بالای سایت */
+.dashboard-header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+/* 🔹 دکمه خروج */
+.logout-btn {
+  background: rgba(255,255,255,0.2);
+  color: var(--text-light);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-1px);
+}
+
+/* 🔹 نوار تب‌ها (سه ستون بالای سایت) */
+.tabs {
+  display: flex;
+  background: var(--card-bg);
+  border-bottom: 2px solid var(--border-color);
+  padding: 0 2rem;
+}
+
+/* هر تب */
+.tab {
+  padding: 1rem 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+/* حالت hover */
+.tab:hover {
+  background: #f3e5f5; /* بنفش خیلی روشن */
+  color: var(--primary);
+}
+
+/* حالت فعال */
+.tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: bold;
+}
+
+/* 🔹 محتوای داشبورد */
+.dashboard-content {
+  padding: 2rem;
+}
+
+/* 🔹 باکس هر تب */
+.tab-content {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.tab-content:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

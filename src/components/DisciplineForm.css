@@ -1,0 +1,403 @@
+.discipline-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.discipline-form h3 {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: right;
+}
+
+.selected-student {
+  background: #e7f3ff;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  border-right: 4px solid #667eea;
+  text-align: right;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 1rem 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.tab:hover {
+  background: #f8f9fa;
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+  font-weight: bold;
+}
+
+.form {
+  text-align: right;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 2rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.submit-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background: #5a6fd8;
+}
+
+.records-list,
+.visits-section {
+  text-align: right;
+}
+
+.records-list h4,
+.visits-section h4 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.record-item,
+.visit-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border-right: 4px solid #667eea;
+}
+
+.record-header,
+.visit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.type {
+  background: #667eea;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+}
+
+.record-footer {
+  margin-top: 0.5rem;
+}
+
+.sms {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.sms.sent {
+  background: #d4edda;
+  color: #155724;
+}
+
+.sms.not-sent {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.visits-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-visit-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.add-visit-btn:hover {
+  background: #218838;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+  font-style: italic;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+/* در DisciplineForm.css */
+.student-selection {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.search-box {
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.students-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+}
+
+.student-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.student-item:hover {
+  background: #f0f0f0;
+}
+
+.student-item.selected {
+  background: #e3f2fd;
+  border-left: 4px solid #2196f3;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.student-info strong {
+  font-size: 14px;
+}
+
+.student-info span {
+  font-size: 12px;
+  color: #666;
+}
+
+.selected-student-info {
+  margin-top: 10px;
+  padding: 10px;
+  background: #e8f5e8;
+  border-radius: 4px;
+  border-right: 4px solid #4caf50;
+}
+/* در DisciplineForm.css */
+/* جدول آمار */
+.statistics-table {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+}
+
+.stats-table th {
+  background: #e9ecef;
+  font-weight: bold;
+}
+
+/* جدول‌های اصلی */
+.table-container {
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.records-table,
+.visits-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.records-table th,
+.records-table td,
+.visits-table th,
+.visits-table td {
+  padding: 12px;
+  text-align: right;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.records-table th,
+.visits-table th {
+  background: #f8f9fa;
+  font-weight: bold;
+  color: #495057;
+}
+
+/* بدج‌های نوع رکورد */
+.type-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.type-badge.delay {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.type-badge.absence {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* وضعیت پیامک */
+.sms-status.sent {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.sms-status.not-sent {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* سلول توضیحات */
+.description-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* دکمه حذف */
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.no-data {
+  text-align: center;
+  color: #6c757d;
+  padding: 20px;
+}
